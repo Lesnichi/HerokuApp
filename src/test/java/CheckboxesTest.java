@@ -61,5 +61,6 @@ public class CheckboxesTest {
         checkboxesElements.get(1).click();
         assertTrue(!checkboxesElements.get(1).isSelected());
         browser.quit();
+
     }
 }
