@@ -7,9 +7,10 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class CheckboxesTest {
+public class CheckboxTest {
 
     public static final String URL = "http://the-internet.herokuapp.com/checkboxes";
 
@@ -21,7 +22,7 @@ public class CheckboxesTest {
         browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         browser.get(URL);
         List<WebElement> checkboxesElements = browser.findElements(By.cssSelector("[type='checkbox']"));
-        assertTrue(!checkboxesElements.get(0).isSelected());
+        assertFalse(checkboxesElements.get(0).isSelected());
         browser.quit();
     }
 
@@ -59,8 +60,7 @@ public class CheckboxesTest {
         browser.get(URL);
         List<WebElement> checkboxesElements = browser.findElements(By.cssSelector("[type='checkbox']"));
         checkboxesElements.get(1).click();
-        assertTrue(!checkboxesElements.get(1).isSelected());
+        assertFalse(checkboxesElements.get(1).isSelected());
         browser.quit();
-
     }
 }
