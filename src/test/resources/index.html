@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Homework HTML</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<img src="logo.png" alt="TMS">
+
+<h2>Таблица успеваемости</h2>
+
+<table>
+    <tr>
+        <th>Номер домашнего задания и его название</th>
+        <th>Отметьте выполненные задания</th>
+    </tr>
+    <tr>
+        <td>Task #1 Требования</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>Task #2 Checklist</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    <tr>
+        <td>Task #3 Bugs</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>Task #4-5 Intro</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>Task #6 Selenium</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+    <tr>
+        <td>Task #7 HTML</td>
+        <td>
+            <input type="checkbox">
+        </td>
+    </tr>
+</table>
+
+<h3>Введите фамилию и имя слушателя программы</h3>
+
+<form action="/action_page.php">
+    <label for="fname">Имя:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Фамилия:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="group">Выберете номер группы:</label>
+    <select name="group" id="group">
+        <option value="QA07">QA07</option>
+        <option value="QA08">QA08</option>
+        <option value="QA09">QA09</option>
+    </select><br><br>
+    <input type="submit" value="Принять">
+</form>
+
+<h3> Перед отправкой результатов проверьте еще раз введенные данные </h3>
+<button type="button" onclick="alert('Hello world!')">Отправить результаты преподователю</button>
+
+<p>Для получения более подробной информации о курсе перейдите по ссылке:
+    <a href="http://tms-auto.tilda.ws/" , align="cente">http://tms-auto.tilda.ws/</a>
+</p>
+
+</body>
+</html>
